@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "915444072047",
+    "project_id": "happypulse1-18da9",
+    "storage_bucket": "happypulse1-18da9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915444072047:android:d08d8ade7b43a84369979a",
+        "android_client_info": {
+          "package_name": "com.jhainusa.happypulse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXQ2sEgA3bbMwtdD2tWMreZoyL54ZSEdc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

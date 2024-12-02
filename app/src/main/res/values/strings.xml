@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">HappyPulse</string>
+    <string name="please_read_our_privacy_policy_and_confirm_the_following_declarations_consents_can_be_withdrawn_in_settings_at_any_time">Please read our Privacy Policy and confirm the following declarations. Consents can be withdrawn in Settings at any time.</string>
+    <string name="i_agree_to_ada_"><![CDATA[I agree to Ada’s Terms & Conditions and confirm that I am at least 16 years old.]]></string>
+    <string name="i_consent_to_ada_">I consent to Ada using any personal health data I voluntarily share here so Ada can create (3.2) and personalise (3.3) my account and provide health assessments and guidance (3.5).</string>
+    <string name="hospitalname">Apollo Hospital</string>
+    <string name="address">Sector-62,Noida</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+</resources>

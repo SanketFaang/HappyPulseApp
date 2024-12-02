@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:background="#F5F8FB">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="Set Up Your Profile"
+        android:textColor="#1C2A37"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway"
+        android:text="Name"
+        android:textFontWeight="600"
+        android:textColor="#1C2A37"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/textfieldback"
+        android:fontFamily="@font/raleway"
+        android:hint="Enter your name"
+        android:padding="12dp" />
+
+    <!-- Profile Picture Field -->
+
+    <!-- Age Field -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway"
+        android:text="Age"
+        android:textFontWeight="600"
+        android:textColor="#1C2A37"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/textfieldback"
+        android:fontFamily="@font/raleway"
+        android:hint="Enter your age"
+        android:inputType="number"
+        android:padding="12dp" />
+
+    <!-- Gender Field -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway"
+        android:text="Gender"
+        android:textFontWeight="600"
+        android:textColor="#1C2A37"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/textfieldback"
+        android:fontFamily="@font/raleway"
+        android:padding="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway"
+        android:text="Weight"
+        android:textFontWeight="600"
+        android:textColor="#1C2A37"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/textfieldback"
+        android:fontFamily="@font/raleway"
+        android:hint="Enter your Weight in kg"
+        android:padding="12dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway"
+        android:text="Height"
+        android:textFontWeight="600"
+        android:textColor="#1C2A37"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/textfieldback"
+        android:fontFamily="@font/raleway"
+        android:hint="Enter Height in cm"
+        android:padding="12dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway"
+        android:textFontWeight="600"
+        android:text="Blood Group"
+        android:textColor="#1C2A37"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/bloodgroup"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:textFontWeight="600"
+        android:background="@drawable/textfieldback"
+        android:fontFamily="@font/raleway"
+        android:padding="12dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/completeProfileButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/raleway"
+        android:backgroundTint="@color/greenbutton"
+        android:textAllCaps="false"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

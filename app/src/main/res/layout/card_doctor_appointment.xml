@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="5dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="2dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ImageView"
+            android:layout_width="110dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/doc1img1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/softcorner" />
+
+        <TextView
+            android:id="@+id/docname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/raleway_bold"
+            android:text="Dr.Anil Kumar"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ImageView"
+            app:layout_constraintTop_toTopOf="@+id/ImageView" />
+
+        <TextView
+            android:id="@+id/docexp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/raleway"
+            android:text="Neurologist"
+            android:textFontWeight="550"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/ImageView"
+            app:layout_constraintTop_toBottomOf="@+id/docname" />
+
+        <TextView
+            android:id="@+id/hosname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/raleway"
+            android:text="@string/hospitalname"
+            android:textFontWeight="500"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/docexp"
+            app:layout_constraintTop_toBottomOf="@+id/docexp" />
+
+        <TextView
+            android:id="@+id/docadd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:text="@string/address"
+            android:textFontWeight="500"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/hosname"
+            app:layout_constraintTop_toBottomOf="@+id/hosname" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="12dp"
+            android:backgroundTint="@color/greenbutton"
+            android:fontFamily="@font/raleway"
+            android:text="Book now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ImageView"
+            app:layout_constraintTop_toBottomOf="@+id/docadd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

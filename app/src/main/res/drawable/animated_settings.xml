@@ -1,0 +1,35 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector
+            android:height="64dp"
+            android:width="64dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+
+            <!-- Gear Path -->
+            <group
+                android:name="rotationGroup"
+                android:pivotX="12"
+                android:pivotY="12">
+                <path
+                    android:name="gear"
+                    android:fillColor="#FF000000"
+                    android:pathData="M12 15.5A3.5 3.5 0 0 1 12 8.5A3.5 3.5 0 0 1 12 15.5ZM19.43 12.98C19.46 12.66 19.5 12.34 19.5 12C19.5 11.66 19.46 11.34 19.43 11.02L21.54 9.36C21.75 9.2 21.8 8.91 21.66 8.68L19.66 5.32C19.52 5.09 19.25 5 19 5.11L16.85 6.02C16.3 5.62 15.71 5.28 15.09 5.02L14.7 2.49C14.66 2.21 14.4 2 14.11 2H9.89C9.6 2 9.34 2.21 9.3 2.49L8.91 5.02C8.29 5.28 7.7 5.62 7.15 6.02L5 5.11C4.75 5 4.48 5.09 4.34 5.32L2.34 8.68C2.2 8.91 2.25 9.2 2.46 9.36L4.57 11.02C4.54 11.34 4.5 11.66 4.5 12C4.5 12.34 4.54 12.66 4.57 12.98L2.46 14.64C2.25 14.8 2.2 15.09 2.34 15.32L4.34 18.68C4.48 18.91 4.75 19 5 18.89L7.15 17.98C7.7 18.38 8.29 18.72 8.91 18.98L9.3 21.51C9.34 21.79 9.6 22 9.89 22H14.11C14.4 22 14.66 21.79 14.7 21.51L15.09 18.98C15.71 18.72 16.3 18.38 16.85 17.98L19 18.89C19.25 19 19.52 18.91 19.66 18.68L21.66 15.32C21.8 15.09 21.75 14.8 21.54 14.64L19.43 12.98Z" />
+            </group>
+        </vector>
+    </aapt:attr>
+
+    <!-- Rotation Animation -->
+    <target android:name="rotationGroup">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="rotation"
+                android:duration="500"
+                android:valueFrom="0"
+                android:valueTo="90"
+                android:repeatCount="0" />
+        </aapt:attr>
+    </target>
+</animated-vector>
