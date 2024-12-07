@@ -4,54 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/greenbutton">
+    android:background="@color/white"
+    >
 
 
     <TextView
         android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="18dp"
         android:fontFamily="@font/raleway_bold"
         android:gravity="center"
         android:text="Symptom Checker"
-        android:textColor="#FFFFFF"
-        android:textSize="32sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="26dp"
         android:background="@drawable/baseline_arrow_back_ios_24"
-        android:backgroundTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="26dp"
         android:layout_marginEnd="18dp"
         android:src="@drawable/mingcute_notification_fill"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#333333" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/symptomsback"
-        android:backgroundTint="@color/white"
-        android:paddingTop="30dp"
+        android:layout_marginTop="6dp"
+        android:background="#F5F5F5"
+        android:paddingTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeader">
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <TextView
             android:id="@+id/tvInstruction"
@@ -62,7 +62,7 @@
             android:text="Check all the symptoms that you have experienced in last three days"
             android:textColor="#000000"
             android:textFontWeight="600"
-            android:textSize="22sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -72,6 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
             android:columnCount="2"
             android:padding="4dp"
             android:rowCount="4"
@@ -81,125 +82,191 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/fatigue"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
                 android:layout_margin="8dp"
-                android:background="#92C8C9"
-                android:paddingHorizontal="10dp"
-                android:fontFamily="@font/raleway"
-                android:text="Fatigue"
-                android:textColor="#000000" />
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
+                android:text="fatigue"
+                android:textColor="#06805A" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/Yellowish_Skin"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="10dp"
-                android:layout_rowWeight="1"
+                android:layout_height="35dp"
                 android:layout_gravity="right"
                 android:layout_margin="8dp"
-                android:background="#92C8C9"
-                android:fontFamily="@font/raleway"
-                android:text="Yellowish Skin"
-                android:textColor="#000000" />
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingHorizontal="10dp"
+                android:text="yellowish_skin
+
+"
+                android:textColor="#06805A" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/LossOfAppetite"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
+                android:layout_height="35dp"
                 android:layout_margin="8dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
                 android:paddingHorizontal="10dp"
-                android:background="#92C8C9"
-                android:fontFamily="@font/raleway"
-                android:text="Loss of Appetite"
-                android:textColor="#000000" />
+                android:text="loss_of_appetite"
+                android:textColor="#06805A" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/ChestPain"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
+                android:layout_height="35dp"
                 android:layout_gravity="right"
                 android:layout_margin="8dp"
-                android:background="#92C8C9"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
                 android:paddingHorizontal="10dp"
-                android:fontFamily="@font/raleway"
-                android:text="Chest Pain"
-                android:textColor="#000000" />
+                android:text="chest_pain"
+                android:textColor="#06805A" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/YellowingOfEyes"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_gravity="right"
                 android:layout_margin="8dp"
-                android:background="#92C8C9"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
                 android:paddingHorizontal="10dp"
-                android:fontFamily="@font/raleway"
-                android:text="Yellowing of Eyes"
-                android:textColor="#000000" />
+                android:text="yellowing_of_eyes"
+                android:textColor="#06805A" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/StomachPain"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_gravity="right"
                 android:layout_margin="8dp"
-                android:background="#92C8C9"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
                 android:paddingHorizontal="10dp"
-                android:fontFamily="@font/raleway"
-                android:text="Stomach Pain"
-                android:textColor="#000000" />
+                android:text="stomach_pain"
+                android:textColor="#06805A" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/FamilyGenetics"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_gravity="left"
                 android:layout_margin="8dp"
-                android:background="#92C8C9"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
                 android:paddingHorizontal="10dp"
-                android:fontFamily="@font/raleway"
-                android:text="Family Genetics"
-                android:textColor="#000000" />
+                android:text="weight_loss"
+                android:textColor="#06805A" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/Cough"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_gravity="right"
                 android:layout_margin="8dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
                 android:paddingHorizontal="10dp"
-                android:background="@color/symptomButtonColor"
-                android:fontFamily="@font/raleway"
-                android:text="Cough"
-                android:textColor="#000000" />
+                android:text="cough"
+                android:textColor="#06805A" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/UclersoFtongue"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_gravity="right"
                 android:layout_margin="8dp"
-                android:background="#92C8C9"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
                 android:paddingHorizontal="10dp"
-                android:fontFamily="@font/raleway"
-                android:text="Ulcers on tongue"
-                android:textColor="#000000" />
+                android:text="ulcers_on_tongue"
+                android:textColor="#06805A" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/Vomiting"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_gravity="right"
                 android:layout_margin="8dp"
-                android:background="#92C8C9"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
                 android:paddingHorizontal="10dp"
-                android:fontFamily="@font/raleway"
-                android:text="Vomiting"
-                android:textColor="#000000" />
+                android:text="vomiting"
+                android:textColor="#06805A" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/acidity"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingHorizontal="10dp"
+                android:text="acidity"
+                android:textColor="#06805A" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/high_fever"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingHorizontal="10dp"
+                android:text="high_fever"
+                android:textColor="#06805A" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dehydration"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingHorizontal="10dp"
+                android:text="dehydration"
+                android:textColor="#06805A" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/indigestion"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingHorizontal="10dp"
+                android:text="indigestion"
+                android:textColor="#06805A" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/diarrhoea"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingHorizontal="10dp"
+                android:text="diarrhoea"
+                android:textColor="#06805A" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dizziness"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/raleway_medium"
+                android:paddingHorizontal="10dp"
+                android:text="dizziness"
+                android:textColor="#06805A" />
 
 
         </GridLayout>
@@ -208,6 +275,7 @@
             android:id="@+id/btnNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
             android:backgroundTint="@color/greenbutton"
             android:fontFamily="@font/raleway"
             android:paddingHorizontal="32dp"
@@ -219,4 +287,15 @@
             app:layout_constraintTop_toBottomOf="@+id/gridSymptoms" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:text="Check your Symptoms"
+        android:textFontWeight="550"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvHeader"
+        app:layout_constraintStart_toStartOf="@+id/tvHeader"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
 </androidx.constraintlayout.widget.ConstraintLayout>

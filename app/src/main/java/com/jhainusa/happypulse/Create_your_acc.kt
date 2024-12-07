@@ -35,13 +35,16 @@ class Create_your_acc : AppCompatActivity() {
                 try {
                     auth.createUserWithEmailAndPassword(email, pass).await()
                     Toast.makeText(this@Create_your_acc,"Registration Successful",Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@Create_your_acc,MakeYourProfile::class.java))
+                    startActivity(Intent(this@Create_your_acc,Confirm_you_are_ready::class.java))
                     finish()
                 }
                 catch (e:Exception){
                     Toast.makeText(this@Create_your_acc,"Registration failed : ${e.message}",Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+        binding.alreadyAc.setOnClickListener{
+            startActivity(Intent(this@Create_your_acc,LoginActivity::class.java))
         }
     }
 }

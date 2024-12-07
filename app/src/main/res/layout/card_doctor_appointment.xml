@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:elevation="10dp"
+    android:elevation="15dp"
     app:cardCornerRadius="10dp"
     android:layout_marginVertical="8dp"
     android:layout_marginHorizontal="5dp"
@@ -11,8 +11,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:padding="2dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="2dp">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ImageView"
@@ -33,7 +33,7 @@
             android:layout_marginStart="15dp"
             android:fontFamily="@font/raleway_bold"
             android:text="Dr.Anil Kumar"
-            android:textSize="18sp"
+            android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/ImageView"
@@ -78,13 +78,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="12dp"
             android:backgroundTint="@color/greenbutton"
             android:fontFamily="@font/raleway"
             android:text="Book now"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textFontWeight="600"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ImageView"
             app:layout_constraintTop_toBottomOf="@+id/docadd" />

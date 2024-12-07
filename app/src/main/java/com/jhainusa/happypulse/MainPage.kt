@@ -45,7 +45,10 @@ class MainPage : AppCompatActivity() {
                 R.drawable.baseline_settings_24, R.drawable.animated_settings
             )
         )
-        binding.navView.setMenuItems(menuItems, 1)
+        binding.navView.setMenuItems(menuItems, 2)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container,HomeFragment())
+            .commit()
         binding.navView.setOnMenuItemClickListener { cbnMenuItem, index ->
             val fragment = when (index) {
                 0 -> ChatbotFragment()

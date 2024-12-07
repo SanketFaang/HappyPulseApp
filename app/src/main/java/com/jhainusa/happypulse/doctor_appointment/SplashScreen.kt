@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.jhainusa.happypulse.Create_your_acc
+import com.jhainusa.happypulse.MainActivity
 import com.jhainusa.happypulse.MainPage
 import com.jhainusa.happypulse.R
 import kotlinx.coroutines.CoroutineScope
@@ -39,7 +40,7 @@ class SplashScreen : AppCompatActivity() {
             if (currentUser != null) {
                 startActivity(Intent(this@SplashScreen, MainPage::class.java))
             } else {
-                startActivity(Intent(this@SplashScreen, Create_your_acc::class.java))
+                startActivity(Intent(this@SplashScreen, MainActivity::class.java))
             }
             finish()
         }

@@ -5,6 +5,7 @@ data class doctorinfo(
     val docname:String?="km",
     val docexp:String?="knd",
     val hosname:String?="knf",
-    val docadd:String?="kjsn"
+    val docadd:String?="kjsn",
+    val docbio:String?="knomv"
 )
 

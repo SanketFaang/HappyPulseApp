@@ -5,4 +5,6 @@
     <color name="buttonColor">#3B82F6</color>
     <color name="greenbutton">#09B480</color>
     <color name="symptomButtonColor">#92C8C9</color>
+    <color name="_112828">#112828</color>
+    <color name="cardbackgroundcolor">#5CB69B</color>
 </resources>

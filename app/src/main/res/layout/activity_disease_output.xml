@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_margin="20dp"
     android:layout_height="match_parent"
     android:background="@color/white">
 
@@ -13,8 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="280dp"
-        android:fontFamily="@font/raleway"
-        android:textFontWeight="600"
+        android:fontFamily="@font/raleway_medium"
         android:gravity="center"
         android:padding="30dp"
         android:text="You are suffering from Piles"
@@ -30,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:padding="20dp"
+        android:fontFamily="@font/raleway_medium"
         android:text="Please Contact the doctors for treatment."
         android:textSize="24sp"
         app:layout_constraintTop_toBottomOf="@+id/tv_suffering"

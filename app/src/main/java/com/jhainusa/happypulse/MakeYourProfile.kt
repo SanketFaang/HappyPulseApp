@@ -44,7 +44,6 @@ class MakeYourProfile : AppCompatActivity() {
                 Toast.makeText(this,"Please fill all the details",Toast.LENGTH_SHORT).show()
             }
             else{
-                CoroutineScope(Dispatchers.IO).launch{
                     val editor = getSharedPreferences("USER_DETAILS", MODE_PRIVATE).edit()
                     editor.putString("name",name)
                     editor.putString("age",age)
@@ -52,8 +51,8 @@ class MakeYourProfile : AppCompatActivity() {
                     editor.putString("weight",weight)
                     editor.putString("height",height)
                     editor.putString("bloodgrp",bloodgrp)
-                }
-                startActivity(Intent(this,MainPage::class.java))
+                    Toast.makeText(this@MakeYourProfile,"SharedPreference Created",Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this,MainPage::class.java))
             }
         }
     }

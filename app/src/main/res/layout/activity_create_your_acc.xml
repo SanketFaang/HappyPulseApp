@@ -9,23 +9,18 @@
     android:gravity="top"
     android:background="@color/white">
         <!-- Back Icon -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginStart="12dp"
-            android:src="@drawable/baseline_arrow_back_ios_24"
-            android:layout_gravity="start" />
 
         <!-- Title -->
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/raleway_bold"
             android:textFontWeight="750"
             android:layout_marginVertical="18dp"
             android:layout_gravity="center"
             android:text="SignUp"
+            android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
+            android:gravity="center"
             android:textColor="@color/black"
             android:textSize="30sp" />
         <ImageView
@@ -75,6 +70,7 @@
             android:textColor="@color/white" />
 
         <TextView
+            android:id="@+id/alreadyAc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/raleway"

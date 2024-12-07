@@ -10,18 +10,39 @@ import com.jhainusa.happypulse.R
 import com.squareup.picasso.Picasso
 
 class Slideadapter(var doctorArray: List<doctorinfo>) : RecyclerView.Adapter<Slideadapter.SlideViewHolder>() {
-    class SlideViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+    private lateinit var mylistener : onItemClickListener
+
+    interface onItemClickListener {
+        fun onItemCLick(position: Int)
+    }
+    fun setItemCLickListener(listener: onItemClickListener){
+        mylistener=listener
+    }
+    inner class SlideViewHolder(itemView: View , listener: onItemClickListener):RecyclerView.ViewHolder(itemView){
         val imageView :ImageView = itemView.findViewById(R.id.ImageView)
         val docname:TextView=itemView.findViewById(R.id.docname)
         val docexp:TextView=itemView.findViewById(R.id.docexp)
         val hosname:TextView=itemView.findViewById(R.id.hosname)
         val hosadd:TextView=itemView.findViewById(R.id.docadd)
 
+        fun bind(doctor : doctorinfo){
+            docname.text=doctor.docname
+            docexp.text=doctor.docexp
+            hosadd.text=doctor.docadd
+            hosname.text=doctor.hosname
+            Picasso.get().load(doctor.docimg).into(imageView)
+
+        }
+        init{
+            itemView.setOnClickListener{
+                listener.onItemCLick(adapterPosition)
+            }
+    }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SlideViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_doctor_appointment,parent,false)
-        return SlideViewHolder(view)
+        return SlideViewHolder(view,mylistener)
     }
 
     override fun getItemCount(): Int {

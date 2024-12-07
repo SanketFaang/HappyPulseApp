@@ -12,6 +12,8 @@ class DiseaseOutput : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_disease_output)
+        val data = intent.getStringExtra("result")
         val txt = findViewById<TextView>(R.id.tv_suffering)
+        txt.text="You are suffering from \n ${data}"
     }
 }

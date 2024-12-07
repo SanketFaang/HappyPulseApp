@@ -2,6 +2,7 @@ package com.jhainusa.happypulse.doctor_appointment
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -56,8 +58,16 @@ class ChatbotFragment : Fragment() {
         messageView.text = message
         messageView.textSize = 16f
         messageView.setPadding(16, 8, 16, 8)
+        messageView.setTextColor(
+            if(isUser){
+                ContextCompat.getColor(requireContext(),R.color.white)
+            }
+            else{
+                ContextCompat.getColor(requireContext(), R.color.black)
+            }
+        )
         messageView.setBackgroundResource(
-            if (isUser) R.drawable.user_text_field else R.drawable.textfieldback
+            if (isUser) R.drawable.userreply else R.drawable.textfieldback
         )
 
         val params = LinearLayout.LayoutParams(
@@ -65,8 +75,8 @@ class ChatbotFragment : Fragment() {
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
 
-        params.setMargins(0, 8, 0, 8)
-        params.gravity = if (isUser) View.FOCUS_RIGHT else View.FOCUS_LEFT
+        params.setMargins(0, 10, 0, 10)
+        params.gravity = if (!isUser) Gravity.START else Gravity.END
 
         messageView.layoutParams = params
         chatContainer.addView(messageView)
@@ -75,7 +85,7 @@ class ChatbotFragment : Fragment() {
         chatScrollView.post { chatScrollView.fullScroll(View.FOCUS_DOWN) }
     }
 
-    // Function to send message to Gemini API
+
     private fun sendMessageToGemini(message: String) {
         val client = OkHttpClient()
         val url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBkHQYZ_9NeHDJQuXTRJo_ECBav3pUJre0" // Replace with your actual API key

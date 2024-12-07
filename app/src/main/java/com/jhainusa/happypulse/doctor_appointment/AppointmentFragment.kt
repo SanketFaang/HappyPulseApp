@@ -1,5 +1,6 @@
 package com.jhainusa.happypulse.doctor_appointment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.jhainusa.happypulse.DoctorProfile
+import com.jhainusa.happypulse.MyAdapter
 import com.jhainusa.happypulse.databinding.FragmentAppointmentBinding
 
 class AppointmentFragment : Fragment() {
@@ -50,6 +53,17 @@ class AppointmentFragment : Fragment() {
             override fun onCancelled(error: DatabaseError){
                 Toast.makeText(requireContext(),"Failed to load data +${error}",Toast.LENGTH_SHORT).show()
             }
+        })
+        adapter.setItemCLickListener(object :Slideadapter.onItemClickListener{
+            override fun onItemCLick(position: Int) {
+                val intent = Intent(requireContext(),DoctorProfile::class.java)
+                intent.putExtra("DoctorName",doctorlist[position].docname)
+                intent.putExtra("Doctor Bio",doctorlist[position].docbio)
+                intent.putExtra("photo",doctorlist[position].docimg)
+                intent.putExtra("docexp",doctorlist[position].docexp)
+                startActivity(intent)
+            }
+
         })
         return binding.root
     }
